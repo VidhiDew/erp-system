@@ -32,10 +32,10 @@ erp-system
 
 API Endpoints :
 Employee APIs :
-POST /api/employees → Create Employee
-GET /api/employees → Get All Employees
-GET /api/employees/{id} → Get Employee by ID
-PUT /api/employees/{id} → Update Employee
+POST /api/employees → Create Employee,
+GET /api/employees → Get All Employees,
+GET /api/employees/{id} → Get Employee by ID,
+PUT /api/employees/{id} → Update Employee,
 DELETE /api/employees/{id} → Delete Employee
 
 Author :
