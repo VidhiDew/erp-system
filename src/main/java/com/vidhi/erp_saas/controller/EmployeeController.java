@@ -24,7 +24,7 @@ public class EmployeeController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Employee>> findEmployeeById(@PathVariable Long id){
-        return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
+        return new ResponseEntity(employeeService.getEmployeeById(id), HttpStatus.OK);
     }
 
     @GetMapping
@@ -35,7 +35,7 @@ public class EmployeeController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteEmployeeById(@PathVariable Long id) {
 
-        Optional<Employee> emp = employeeService.getEmployeeById(id);
+        Optional<Employee> emp = Optional.ofNullable(employeeService.getEmployeeById(id));
         if (emp == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("Employee not found");
